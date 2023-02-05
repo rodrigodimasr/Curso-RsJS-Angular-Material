@@ -3,9 +3,9 @@
   <mat-sidenav
     class="sidenav"
     #sidenav
-    opened
+    [opened]="!isIsmallScreen"
     [fixedInViewport]="true"
-    mode="push"
+    [mode]="sidenavMove"
   >
   </mat-sidenav>
 
