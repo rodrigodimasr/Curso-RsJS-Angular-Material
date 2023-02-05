@@ -1,0 +1,27 @@
+<h1>Inputs</h1>
+<mat-form-field floatLabel="always" appearance="fill">
+  <input type="text" matInput placeholder="name">
+</mat-form-field>
+<mat-form-field >
+  <mat-label>Name</mat-label>
+  <input type="text" matInput placeholder="name">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Name</mat-label>
+  <input type="text" matInput placeholder="name" [(ngModel)]="value">
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field >
+  <mat-label>Name</mat-label>
+  <input #userName type="text" matInput placeholder="name" maxlength="10">
+  <mat-hint align="start" matSuffix>Apenas {{userName.maxLength}} caracteres</mat-hint>
+</mat-form-field>
+<mat-form-field >
+  <mat-label>Name</mat-label>
+  <input #userName_ type="text" matInput placeholder="name" maxlength="10">
+  <mat-hint align="end" matSuffix>{{userName_.value.length}}/10</mat-hint>
+</mat-form-field>
+
