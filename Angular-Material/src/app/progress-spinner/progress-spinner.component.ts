@@ -11,12 +11,17 @@ import { ProgressBarMode } from '@angular/material/progress-bar';
 export class ProgressSpinnerComponent implements OnInit {
   public loadingPercent = 0;
   public queryValue = 0;
+  public currentPlaback = 0;
   public queryMode: ProgressBarMode = 'query';
+
   constructor() { }
 
   ngOnInit(): void {
-    this.loadingProgress(500, 95)
+    this.loadingProgress(500, 100)
     .subscribe(i => this.loadingPercent = i);
+
+    this.loadingProgress(250, 100)
+    .subscribe(i => this.currentPlaback = i);
 
     concat(
     interval(2000)
@@ -27,7 +32,11 @@ export class ProgressSpinnerComponent implements OnInit {
     this.loadingProgress(500, 100)
     ).subscribe(i => this.queryValue = i);
 
+
   }
+
+
+
 
   loadingProgress(speed: number, takeUntil: number) {
     return interval(speed)
