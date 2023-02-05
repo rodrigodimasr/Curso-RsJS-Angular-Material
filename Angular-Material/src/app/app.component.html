@@ -7,6 +7,13 @@
     [fixedInViewport]="true"
     [mode]="sidenavMove"
   >
+  <mat-toolbar color="primary">
+    Smart Examples
+  </mat-toolbar>
+  <mat-nav-list>
+    <a mat-list-item routerLink="/buttonIcon">Button icon</a>
+    <a mat-list-item routerLink="/formFieldInput">Form field input</a>
+  </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -34,8 +41,9 @@
     <mat-toolbar class="toolbar-submenu" color="primary">
         <span *ngIf="!popText">My App</span>
     </mat-toolbar>
-    <!-- <app-buttons-icons></app-buttons-icons> -->
-    <app-form-field-input></app-form-field-input>
+
+    <router-outlet></router-outlet>
+
     <h1 class="title">teste</h1>
     <h1 class="title">teste</h1>
     <h1 class="title">teste</h1>
@@ -45,4 +53,3 @@
 </mat-sidenav-container>
 
 
-<router-outlet></router-outlet>
