@@ -10,6 +10,8 @@ import { ButtonsIconsComponent } from './buttons-icons/buttons-icons.component';
 import { FormFieldInputComponent } from './form-field-input/form-field-input.component';
 import { FormsModule } from '@angular/forms';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { TabsComponent } from './tabs/tabs.component';
+
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
     AppComponent,
     ButtonsIconsComponent,
     FormFieldInputComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    TabsComponent
    ],
   imports: [
     BrowserModule,
