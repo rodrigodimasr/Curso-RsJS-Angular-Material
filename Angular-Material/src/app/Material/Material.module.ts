@@ -1,3 +1,4 @@
+import { SnackbarMsnComponent } from './../snackbar/snackbar-msn/snackbar-msn.component';
 import { NgModule } from '@angular/core';
 
 
@@ -15,7 +16,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar'
-
 
 
 

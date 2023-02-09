@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarMsnComponent } from './snackbar-msn/snackbar-msn.component'
 
 @Component({
   selector: 'app-snackbar',
@@ -28,6 +29,16 @@ export class SnackbarComponent implements OnInit {
     snackBar.onAction().subscribe(_ => {
       console.log('on Action');
     })
+  }
+
+  public openFromCOmp() {
+    this.snackbar.openFromComponent(SnackbarMsnComponent, {
+      data: 'Hello People',
+      duration: 2500,
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+    })
+
   }
 
 }
